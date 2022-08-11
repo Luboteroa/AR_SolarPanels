@@ -8,6 +8,8 @@ using UnityEngine.EventSystems;
 public class ARInteractionManager : MonoBehaviour
 {
     [SerializeField] private Camera arCamera;
+    [SerializeField] private float scaleFactor = 2f;
+    [SerializeField] private float scaleTolerance = 2f;
     private ARRaycastManager aRRaycastManager;
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
@@ -19,6 +21,7 @@ public class ARInteractionManager : MonoBehaviour
     private bool isOverUI;
     private bool isOver3DModel;
     private Vector2 initialTouchPos;
+    private float touchDis;
 
     public GameObject Item3DModel
     {
@@ -81,14 +84,26 @@ public class ARInteractionManager : MonoBehaviour
                 if(touchOne.phase == TouchPhase.Began || touchTwo.phase == TouchPhase.Began)
                 {
                     initialTouchPos = touchTwo.position - touchOne.position;
+                    touchDis = Vector2.Distance(touchTwo.position, touchOne.position);
                 }
 
                 if(touchOne.phase == TouchPhase.Moved || touchTwo.phase == TouchPhase.Moved)
                 {
                     Vector2 currentTouchPos = touchTwo.position - touchOne.position;
+                    float currentTouchDis = Vector2.Distance(touchTwo.position, touchOne.position);
+
+                    float diffDis = currentTouchDis - touchDis;
+
+                    //Rotation
                     float angle = Vector2.SignedAngle(initialTouchPos, currentTouchPos);
                     item3DModel.transform.rotation = Quaternion.Euler(0, item3DModel.transform.eulerAngles.y - angle, 0);
-                    initialTouchPos = currentTouchPos;
+
+                    //Scale
+                    Vector3 newScale = item3DModel.transform.localScale + Mathf.Sign(diffDis) * Vector3.one * scaleFactor;
+                    item3DModel.transform.localScale = Vector3.Lerp(item3DModel.transform.localScale, newScale, 1f);
+
+                    touchDis = currentTouchDis;
+                    initialTouchPos = currentTouchPos; 
                 }
             }
 
