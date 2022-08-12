@@ -49,8 +49,8 @@ public class ARInteractionManager : MonoBehaviour
             aRRaycastManager.Raycast(middlePointScreen, hits, TrackableType.Planes);
             if(hits.Count>0)
             {
-                transform.position = hits[0].pose.position;
-                transform.rotation = hits[0].pose.rotation;
+                transform.position = hits[1].pose.position;
+                transform.rotation = hits[1].pose.rotation;
                 aRPointer.SetActive(true);
                 isInitialPosition = false;
             }
