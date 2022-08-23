@@ -29,6 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7640532773433830480}
+  - {fileID: 8496222550099231904}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45,6 +46,167 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0278215, y: 0.74161243, z: 0.57224}
   m_Center: {x: 0.08346546, y: 0.36273623, z: -0.026082933}
+--- !u!1001 &4409672435473688590
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8047924150383285885}
+    m_Modifications:
+    - target: {fileID: 163604321018483098, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_text
+      value: "Centrifugal pump of 2'': minimum capacity 150 l/min and pressure 4
+        bar\r\nMaximum pumping capacity: 350 l/min\r\nMinimum suction depth: 12 m\r\nDiameter
+        of the suction aperture (inlet): 50 mm(2'')\r\nDiameter of the discharge
+        aperture (outlet): 50 mm(2'')\r\nMaximum pressure: 5 to 6 bar \r\nComplete
+        with pulleys (2 grooves) and belts (set per item)\r\nNPSHr (Nominal Suction
+        Head): 6 m\r\nApproximate dry weight: 7 kg\r\nNet power: 3.0 HP\r\nSingle
+        coil electric engine \r\nAir cooled engine\r\nPlug starting system\r\nMaximum
+        speed: 3600 rpm\r\nVoltage: 110 - 250 V\r\nSuction pipe 2'', rubber made,
+        12 m long minimum (one per unit)\r\nDischarge pipe 2'', PE made, 30 m long
+        minimum (one per unit)\r\nSet of tools of for maintenance and repairing of
+        pump (one per unit)\r\nOne 2'' clamp for suction pipe and one 2'' clamp for
+        delivery hose."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 3.3057
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1.5036
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000037252897
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638863117541885448, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0096001625
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286274724548536231, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_Name
+      value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286274724548536231, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9105262583882948978, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1.0424
+      objectReference: {fileID: 0}
+    - target: {fileID: 9105262583882948978, guid: 028f75326e9113d4aa03d49ee72134eb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.18619996
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 028f75326e9113d4aa03d49ee72134eb, type: 3}
+--- !u!224 &8496222550099231904 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5249764310794218670, guid: 028f75326e9113d4aa03d49ee72134eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 4409672435473688590}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7890897457377020859
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,12 +10,14 @@ public class ARInteractionManager : MonoBehaviour
     [SerializeField] private Camera arCamera;
     [SerializeField] private float scaleFactor = 2f;
     [SerializeField] private float scaleTolerance = 2f;
+    private GameObject UI_Description;
     private ARRaycastManager aRRaycastManager;
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     private GameObject aRPointer;
     private GameObject item3DModel;
     private GameObject itemSelected;
+    private Animator animator;
 
     private bool isInitialPosition;
     private bool isOverUI;
@@ -28,6 +30,7 @@ public class ARInteractionManager : MonoBehaviour
         set
         {
             item3DModel = value;
+            animator = item3DModel.GetComponentInChildren<Animator>();
             item3DModel.transform.position = aRPointer.transform.position;
             item3DModel.transform.parent = aRPointer.transform; 
             isInitialPosition = true;
@@ -64,6 +67,8 @@ public class ARInteractionManager : MonoBehaviour
                 var touchPosition = touchOne.position;
                 isOverUI = IsTapOverUI(touchPosition);
                 isOver3DModel = IsTapOver3DModel(touchPosition);
+                if(animator == null) {return;}
+                animator.SetTrigger("Trigger");
             }
 
             if(touchOne.phase == TouchPhase.Moved)
@@ -111,10 +116,13 @@ public class ARInteractionManager : MonoBehaviour
             {
                 GameManager.instance.ARPosition();
                 item3DModel = itemSelected;
+                animator = item3DModel.GetComponentInChildren<Animator>();
                 itemSelected = null;
                 aRPointer.SetActive(true);
                 transform.position = item3DModel.transform.position;
                 item3DModel.transform.parent = aRPointer.transform;
+                if(animator == null) {return;}
+                animator.SetTrigger("Trigger");
             }
         }
     }
@@ -148,6 +156,8 @@ public class ARInteractionManager : MonoBehaviour
     {
         if(item3DModel != null)
         {
+            animator.SetTrigger("Trigger");
+            animator = null;
             item3DModel.transform.parent = null;
             aRPointer.SetActive(false);
             item3DModel = null;
